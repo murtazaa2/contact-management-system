@@ -1,0 +1,11 @@
+body {
+  background-color: lightgray;
+}
+
+h2 {
+  font-weight: 600;
+}
+
+.navbar {
+  margin-bottom: 20px;
+}
