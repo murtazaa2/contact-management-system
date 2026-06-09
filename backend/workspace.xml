@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="dd136a66-8c6e-4b0f-8cd2-f136f8e2c767" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="Use Maven wrapper" />
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectId" id="3EotClZsne78tbzPhdCaPcxp7MC" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/murta/Downloads/contact-management-backend&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
+  }
+}</component>
+  <component name="RunManager" selected="Application.ContactManagementBackendApplication">
+    <configuration name="ContactManagementBackendApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.contactmanagement.contact_management.ContactManagementBackendApplication" />
+      <module name="contact-management-backend" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.contactmanagement.contact_management.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ContactServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="contact-management-backend" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.contactmanagement.contact_management.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.contactmanagement.contact_management.service" />
+      <option name="MAIN_CLASS_NAME" value="com.contactmanagement.contact_management.service.ContactServiceTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ContactServiceTest.testGetAllContacts" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="contact-management-backend" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.contactmanagement.contact_management.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.contactmanagement.contact_management.service" />
+      <option name="MAIN_CLASS_NAME" value="com.contactmanagement.contact_management.service.ContactServiceTest" />
+      <option name="METHOD_NAME" value="testGetAllContacts" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ContactServiceTest.testSaveContact" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="contact-management-backend" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.contactmanagement.contact_management.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.contactmanagement.contact_management.service" />
+      <option name="MAIN_CLASS_NAME" value="com.contactmanagement.contact_management.service.ContactServiceTest" />
+      <option name="METHOD_NAME" value="testSaveContact" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SimpleTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="contact-management-backend" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.contactmanagement.contact_management.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.contactmanagement.contact_management" />
+      <option name="MAIN_CLASS_NAME" value="com.contactmanagement.contact_management.SimpleTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.ContactManagementBackendApplication" />
+        <item itemvalue="JUnit.ContactServiceTest" />
+        <item itemvalue="JUnit.ContactServiceTest.testSaveContact" />
+        <item itemvalue="JUnit.SimpleTest" />
+        <item itemvalue="JUnit.ContactServiceTest.testGetAllContacts" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="dd136a66-8c6e-4b0f-8cd2-f136f8e2c767" name="Changes" comment="" />
+      <created>1780856628341</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1780856628341</updated>
+    </task>
+    <servers />
+  </component>
+</project>
