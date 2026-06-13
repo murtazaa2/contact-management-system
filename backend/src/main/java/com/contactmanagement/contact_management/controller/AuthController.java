@@ -10,46 +10,45 @@ import org.springframework.http.ResponseEntity;
 
 @RestController
 @RequestMapping("/api/auth")
-@CrossOrigin(origins = "http://localhost:5173")
 public class AuthController {
 
-    @Autowired
-    private UserService userService;
+        @Autowired
+        private UserService userService;
 
-    @Autowired
-    private JwtUtil jwtUtil;
+        @Autowired
+        private JwtUtil jwtUtil;
 
-    @PostMapping("/register")
-    public ResponseEntity<?> registerUser(
-            @RequestBody User user) {
+        @PostMapping("/register")
+        public ResponseEntity<?> registerUser(
+                        @RequestBody User user) {
 
-        if (userService.existsByUsername(
-                user.getUsername())) {
+                if (userService.existsByUsername(
+                                user.getUsername())) {
 
-            return ResponseEntity.badRequest()
-                    .body("Username already exists");
+                        return ResponseEntity.badRequest()
+                                        .body("Username already exists");
+                }
+
+                userService.saveUser(user);
+
+                return ResponseEntity.ok(
+                                "User Registered Successfully");
         }
 
-        userService.saveUser(user);
+        @PostMapping("/login")
+        public String login(@RequestBody LoginRequest request) {
 
-        return ResponseEntity.ok(
-                "User Registered Successfully");
-    }
+                User user = userService.findByUsername(
+                                request.getUsername());
 
-    @PostMapping("/login")
-    public String login(@RequestBody LoginRequest request) {
+                if (user != null &&
+                                user.getPassword().equals(
+                                                request.getPassword())) {
 
-        User user = userService.findByUsername(
-                request.getUsername());
+                        return jwtUtil.generateToken(
+                                        user.getUsername());
+                }
 
-        if (user != null &&
-                user.getPassword().equals(
-                        request.getPassword())) {
-
-            return jwtUtil.generateToken(
-                    user.getUsername());
+                return "Invalid Username or Password";
         }
-
-        return "Invalid Username or Password";
-    }
 }
