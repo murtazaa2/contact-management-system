@@ -62,27 +62,19 @@ function LoginForm() {
     try {
       const response = await api.post("/api/auth/login", credentials);
 
-      // Adjust this if your backend returns the token under a different key
-      const token = response.data.token;
+      const result = response.data; 
 
-      if (token) {
-        localStorage.setItem("token", token);
+      if (result === "Invalid Username or Password") {
+        setError("Invalid username or password.");
+        return;
       }
 
+      // result is the JWT token
+      localStorage.setItem("token", result);
       navigate("/dashboard");
     } catch (err) {
       console.error(err);
-
-      if (err.response) {
-        setError(
-          err.response.data?.message ||
-            "Invalid username or password."
-        );
-      } else {
-        setError(
-          "Network error. Could not reach the server."
-        );
-      }
+      setError("Network error. Could not reach the server.");
     } finally {
       setLoading(false);
     }
@@ -137,4 +129,4 @@ function LoginForm() {
   );
 }
 
-export default LoginForm;
+export default LoginForm;S
