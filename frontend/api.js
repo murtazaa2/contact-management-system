@@ -13,12 +13,10 @@
 // });
 
 // export default api;
-
 import axios from "axios";
 
-const BASE = "";
 const api = axios.create({
-    baseURL: BASE
+    baseURL: "https://contact-management-system-production-ddfe.up.railway.app"
 });
 
 export default api;
