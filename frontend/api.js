@@ -6,10 +6,19 @@
 
 // export default api;
 
+// import axios from "axios";
+
+// const api = axios.create({
+//     baseURL: "https://contact-management-system-production-ddfe.up.railway.app"
+// });
+
+// export default api;
+
 import axios from "axios";
 
+const BASE = "";
 const api = axios.create({
-    baseURL: "https://contact-management-system-production-ddfe.up.railway.app"
+    baseURL: BASE
 });
 
 export default api;
