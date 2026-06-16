@@ -11,8 +11,9 @@
 	<groupId>com.contactmanagement</groupId>
 	<artifactId>contact-management-backend</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name/>
-	<description/>
+	<packaging>jar</packaging>
+	<name>contact-management-backend</name>
+	<description>Contact Management System - backend service</description>
 	<properties>
 		<java.version>17</java.version>
 		<maven.compiler.source>17</maven.compiler.source>

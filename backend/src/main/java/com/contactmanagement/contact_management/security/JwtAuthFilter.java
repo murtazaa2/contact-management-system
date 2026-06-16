@@ -17,60 +17,48 @@ import java.util.Collections;
 @Component
 public class JwtAuthFilter extends OncePerRequestFilter {
 
-    @Autowired
-    private JwtUtil jwtUtil;
+        @Autowired
+        private JwtUtil jwtUtil;
 
-    @Override
-    protected void doFilterInternal(
-            HttpServletRequest request,
-            HttpServletResponse response,
-            FilterChain filterChain)
-            throws ServletException, IOException {
+        @Override
+        protected void doFilterInternal(
+                        HttpServletRequest request,
+                        HttpServletResponse response,
+                        FilterChain filterChain)
+                        throws ServletException, IOException {
 
-        String authHeader =
-                request.getHeader("Authorization");
+                String authHeader = request.getHeader("Authorization");
 
-        if (authHeader != null &&
-                authHeader.startsWith("Bearer ")) {
+                if (authHeader != null &&
+                                authHeader.startsWith("Bearer ")) {
 
-            String token =
-                    authHeader.substring(7);
+                        String token = authHeader.substring(7);
 
-            System.out.println("TOKEN = " + token);
-            System.out.println("Trying to validate token...");
+                        try {
 
-            try {
+                                String username = jwtUtil.extractUsername(token);
 
-                String username =
-                        jwtUtil.extractUsername(token);
+                                UsernamePasswordAuthenticationToken auth = new UsernamePasswordAuthenticationToken(
+                                                username,
+                                                null,
+                                                Collections.emptyList());
 
-                System.out.println(
-                        "Authenticated User: "
-                                + username);
+                                SecurityContextHolder.getContext()
+                                                .setAuthentication(auth);
 
-                UsernamePasswordAuthenticationToken auth =
-                        new UsernamePasswordAuthenticationToken(
-                                username,
-                                null,
-                                Collections.emptyList()
-                        );
+                        } catch (Exception e) {
 
-                SecurityContextHolder.getContext()
-                        .setAuthentication(auth);
+                                e.printStackTrace();
 
-            } catch (Exception e) {
+                                response.setStatus(
+                                                HttpServletResponse.SC_UNAUTHORIZED);
 
-                e.printStackTrace();
+                                return;
+                        }
+                }
 
-                response.setStatus(
-                        HttpServletResponse.SC_UNAUTHORIZED);
-
-                return;
-            }
+                filterChain.doFilter(
+                                request,
+                                response);
         }
-
-        filterChain.doFilter(
-                request,
-                response);
-    }
 }
