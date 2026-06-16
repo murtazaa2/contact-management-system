@@ -90,13 +90,19 @@ public class SecurityConfig {
                 configuration.setAllowedOrigins(
                                 List.of(
                                                 "http://localhost:5173",
-                                                "https://contact-management-system-ebon.vercel.app",
-                                                "https://contact-management-system-git-main-murtazaa2s-projects.vercel.app"));
+                                                "https://contact-management-system-ebon.vercel.app"));
+
+                configuration.setAllowedOriginPatterns(
+                                List.of(
+                                                "http://localhost:5173",
+                                                "https://*.vercel.app"));
 
                 configuration.setAllowedMethods(
                                 List.of("GET", "POST", "PUT", "DELETE", "OPTIONS"));
 
                 configuration.setAllowedHeaders(List.of("*"));
+
+                configuration.setExposedHeaders(List.of("Authorization"));
 
                 configuration.setAllowCredentials(true);
 

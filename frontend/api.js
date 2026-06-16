@@ -16,7 +16,9 @@
 import axios from "axios";
 
 const api = axios.create({
-    baseURL: "https://contact-management-system-production-ddfe.up.railway.app"
+    baseURL:
+        import.meta.env.VITE_BACKEND_URL ||
+        "https://contact-management-system-production-ddfe.up.railway.app"
 });
 
 export default api;
