@@ -60,12 +60,8 @@ public class SecurityConfig {
                 return source;
         }
 
-        @Bean
-        public FilterRegistrationBean<CorsFilter> corsFilterRegistration(
-                        CorsConfigurationSource corsConfigurationSource) {
-                FilterRegistrationBean<CorsFilter> bean = new FilterRegistrationBean<>(
-                                new CorsFilter(corsConfigurationSource));
-                bean.setOrder(Ordered.HIGHEST_PRECEDENCE);
-                return bean;
-        }
+        // CORS is handled by Spring Security via the corsConfigurationSource bean
+        // above.
+        // Avoid registering a separate CorsFilter here to prevent duplicate filter
+        // registration.
 }
