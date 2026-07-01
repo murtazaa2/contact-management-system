@@ -83,7 +83,9 @@ Unit testing was performed using JUnit 5 and Mockito. Test cases were created fo
 • Email Integration
 10. Conclusion
 The Contact Management System successfully demonstrates Full Stack Web Development using Java Spring Boot and React.js. The application provides secure authentication and efficient contact management while following modern software development practices.
- 11. Screenshots
+
+
+
 Screenshot 1: Registration Page
 <img width="1040" height="786" alt="image" src="https://github.com/user-attachments/assets/55b879a3-c69f-4763-8c24-867bda7f720b" />
 
@@ -106,10 +108,10 @@ Screenshot 6: Edit Contact Page
 screenshot 7 : View Contact Information
 <img width="655" height="466" alt="image" src="https://github.com/user-attachments/assets/99fe5e5d-6707-47ad-a0c2-1cc9e5ff06cf" />
 
-Screenshot : Delete Contact Confirmation
+Screenshot 8 : Delete Contact Confirmation
 Deleted Ali Khan Contact
 <img width="1642" height="362" alt="image" src="https://github.com/user-attachments/assets/60765ff4-c870-409b-8bc4-8dc00468fc53" />
 
-Screenshot : Profile Information
+Screenshot 9 : Profile Information
 <img width="1712" height="466" alt="image" src="https://github.com/user-attachments/assets/93c8ce00-d9a0-42ea-8171-0f81a2181c71" />
 
